@@ -1,0 +1,323 @@
+<!--
+  Generated template for the OrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form [formGroup]="order">
+<div class="head22">
+
+
+
+<ion-grid padding>
+  <ion-row >
+    <ion-col>
+      <ion-list>
+          <ion-item>
+            <ion-label>Select Milk Quantity</ion-label>
+            <ion-select [(ngModel)]="filtermilkwise" formControlName="quantity"  (ionChange)="milkfilter(filtermilkwise);">
+              <ion-option value="100">1 ltr</ion-option>
+              <ion-option value="200">2 ltr</ion-option>
+              <ion-option value="300">3 ltr</ion-option>
+              <ion-option value="400">4 ltr</ion-option>
+              <ion-option value="500">5 ltr</ion-option>
+              <ion-option value="600">6 ltr</ion-option>
+            </ion-select>
+          </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p class="d-price">Doodh Price is</p>
+    </ion-col>
+    <ion-col>
+      <p class="dd-price">{{filtermilkwise}} Rs</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p class="d-price">Service Charges is</p>
+    </ion-col>
+    <ion-col>
+      <p class="dd-price">30 Rs</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p class="p-price">Payable</p>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <p class="pp-price">{{filtermilkwise -- price}} Rs</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+</div>
+<ion-item class="ema">
+    <ion-label floating>Your Name</ion-label>
+    <ion-input type="text" formControlName="yname" ></ion-input>
+  </ion-item>
+  <ion-item class="ema">
+    <ion-label floating>Your Phone Number</ion-label>
+    <ion-input type="phone" formControlName="pphone" ></ion-input>
+  </ion-item>
+<ion-item class="ema">
+    <ion-label floating>Your Address</ion-label>
+    <ion-input type="address" formControlName="address" ></ion-input>
+  </ion-item>
+<button ion-button [disabled]="!order.valid" (click)="msg()" class="ema-bt">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div radio-group>
+    <label>Select Your Zone</label>
+    <ul>
+    	<li>
+        <label>Latifabad</label>
+        <ion-radio value="cgt" (ionSelect)="radio_select('cgt')"></ion-radio></li>
+        <li>
+        <ion-select [disabled]="cgt"  (ionChange)="zonefilter(filterzonewise);">
+			      <ion-option value="100">Unit 2</ion-option>
+			      <ion-option value="200">Unit 3</ion-option>
+			      <ion-option value="300">Unit 4</ion-option>
+			      <ion-option value="400">Unit 5</ion-option>
+			      <ion-option value="500">Unit 6</ion-option>
+			      <ion-option value="600">Unit 7</ion-option>
+			      <ion-option value="200">Unit 8</ion-option>
+			      <ion-option value="300">Unit 9</ion-option>
+			      <ion-option value="400">Unit 10</ion-option>
+			      <ion-option value="500">Unit 11</ion-option>
+			      <ion-option value="600">Unit 12</ion-option>
+			    </ion-select>
+	</li>
+	<li>
+        <label>City</label>
+        <ion-radio value="noncgt" (ionSelect)="radio_select('noncgt')"></ion-radio></li>
+        <li>
+        <ion-select [disabled]="cn"  (ionChange)="zonefilter(filterzonewise);">
+      <ion-option value="100">Choti Gitti</ion-option>
+      <ion-option value="200">Gul Center</ion-option>
+      <ion-option value="300">Pool Center</ion-option>
+      <ion-option value="400">Afandi Town</ion-option>
+    </ion-select>
+    </li>
+</ul>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<ion-list>
+  <ion-item><label>Select Your Zone</label></ion-item>
+  <ion-item>
+    <ion-label>Latifabad</ion-label>
+    <ion-select interface="popover">
+      <ion-option value="100">Unit 2</ion-option>
+            <ion-option value="200">Unit 3</ion-option>
+            <ion-option value="300">Unit 4</ion-option>
+            <ion-option value="400">Unit 5</ion-option>
+            <ion-option value="500">Unit 6</ion-option>
+            <ion-option value="600">Unit 7</ion-option>
+            <ion-option value="200">Unit 8</ion-option>
+            <ion-option value="300">Unit 9</ion-option>
+            <ion-option value="400">Unit 10</ion-option>
+            <ion-option value="500">Unit 11</ion-option>
+            <ion-option value="600">Unit 12</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>City</ion-label>
+    <ion-select interface="popover">
+          <ion-option value="100">Unit 2</ion-option>
+            <ion-option value="100">Choti Gitti</ion-option>
+            <ion-option value="200">Gul Center</ion-option>
+            <ion-option value="300">Pool Center</ion-option>
+            <ion-option value="400">Afandi Town</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Kohsar</ion-label>
+    <ion-select interface="popover">
+          <ion-option value="100">Block A</ion-option>
+      <ion-option value="200">Block B</ion-option>
+      <ion-option value="300">Block C</ion-option>
+      <ion-option value="400">Block D</ion-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-item>
+    <ion-label>Qasmabad</ion-label>
+    <ion-select interface="popover">
+     <ion-option value="100">Memon Society</ion-option>
+      <ion-option value="200">Pakora Chock</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<!-- <button ion-button (click)="confrmaler()">alert</button> -->
+ 
+
+
+
+
+
+<!-- 
+
+
+
+<ul>
+	<li><ion-label>Select Your Zone</ion-label></li>
+	<li>
+      <ion-label>Latifabad</ion-label>
+	  <ion-checkbox  [(ngModel)]="latifabad"  ng-init="latifabad = true"></ion-checkbox>
+	  <div *ngIf="latifabad">
+			<ion-list>
+			  <ion-item>
+			    <ion-label>Select Unit</ion-label>
+			    <ion-select [(ngModel)]="filterzonewise"  (ionChange)="zonefilter(filterzonewise);">
+			      <ion-option value="100">Unit 2</ion-option>
+			      <ion-option value="200">Unit 3</ion-option>
+			      <ion-option value="300">Unit 4</ion-option>
+			      <ion-option value="400">Unit 5</ion-option>
+			      <ion-option value="500">Unit 6</ion-option>
+			      <ion-option value="600">Unit 7</ion-option>
+			      <ion-option value="200">Unit 8</ion-option>
+			      <ion-option value="300">Unit 9</ion-option>
+			      <ion-option value="400">Unit 10</ion-option>
+			      <ion-option value="500">Unit 11</ion-option>
+			      <ion-option value="600">Unit 12</ion-option>
+			    </ion-select>
+			  </ion-item>
+			</ion-list>
+		</div>
+ 	</li>
+  	<li>
+      <ion-label>City</ion-label>
+	  <ion-checkbox  [(ngModel)]="city" ng-init="city = true" ></ion-checkbox>
+	  <div *ngIf="city">
+<ion-list>
+  <ion-item>
+    <ion-label>Select Area</ion-label>
+    <ion-select [(ngModel)]="filterzonewise"  (ionChange)="zonefilter(filterzonewise);">
+      <ion-option value="100">Choti Gitti</ion-option>
+      <ion-option value="200">Gul Center</ion-option>
+      <ion-option value="300">Pool Center</ion-option>
+      <ion-option value="400">Afandi Town</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</div>
+  </li>
+    <li>
+      <ion-label>Kohsar</ion-label>
+	  <ion-checkbox  [(ngModel)]="kohsar" ng-init="kohsar = true" ></ion-checkbox>
+	  <div *ngIf="kohsar">
+<ion-list>
+  <ion-item>
+    <ion-label>Select Area</ion-label>
+    <ion-select [(ngModel)]="filterzonewise"  (ionChange)="zonefilter(filterzonewise);">
+      <ion-option value="100">Block A</ion-option>
+      <ion-option value="200">Block B</ion-option>
+      <ion-option value="300">Block C</ion-option>
+      <ion-option value="400">Block D</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</div>
+  </li>
+    <li>
+      <ion-label>Qasmabad</ion-label>
+	  <ion-checkbox  [(ngModel)]="qasmabad" ng-init="qasmabad = true" ></ion-checkbox>
+	  <div *ngIf="qasmabad">
+<ion-list>
+  <ion-item>
+    <ion-label>Select Area</ion-label>
+    <ion-select [(ngModel)]="filterzonewise"  (ionChange)="zonefilter(filterzonewise);">
+      <ion-option value="100">Memon Society</ion-option>
+      <ion-option value="200">Pakora Chock</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</div>
+  </li>
+</ul>
+
+ -->
+
+
+
+
+
+
+
+
+<!-- 
+
+<ion-list>
+
+ <ion-item>
+    <ion-label floating>Your Name</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Your Number</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+    <p> {{filtermilkwise * filterzonewise}}per ltr</p>
+<p> {{filterzonewise}} kk</p>
+    <button ion-button type="submit" block>Add Todo</button>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+</ion-content>

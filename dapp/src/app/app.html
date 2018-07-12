@@ -1,0 +1,34 @@
+<ion-menu [content]="mycontent" class="mene">
+  <ion-content>
+    <ion-list>
+    	<button ion-item (click)="about(AboutPage)">
+        About
+      </button>
+    </ion-list>
+    <ion-list>
+    	<button ion-item (click)="terms(TermsPage)">
+        Trems
+      </button>
+    </ion-list>
+    <ion-list>
+    	<button ion-item (click)="openPage(homePage)">
+        Privacy
+      </button>
+    </ion-list>
+    <ion-list>
+    	<button ion-item (click)="openPage(homePage)">
+        FAQ
+      </button>
+    </ion-list>
+    <ion-list>
+    	<button ion-item (click)="openPage(homePage)">
+        Careers
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+
+

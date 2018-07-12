@@ -1,0 +1,137 @@
+page-feedback {
+
+.head22 {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(32,147,241);
+    background: -moz-linear-gradient(left, rgba(32,147,241,1) 0%, rgba(32,109,241,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(32,147,241,1) 0%,rgba(32,109,241,1) 100%);
+    background: linear-gradient(to right, rgba(32,147,241,1) 0%,rgba(32,109,241,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2093f1', endColorstr='#206df1',GradientType=1 );       height: 388px;
+}
+
+.toolbar-background-md {
+        background: rgb(32,147,241);
+    background: -moz-linear-gradient(left, rgba(32,147,241,1) 0%, rgba(32,109,241,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(32,147,241,1) 0%,rgba(32,109,241,1) 100%);
+    background: linear-gradient(to right, rgba(32,147,241,1) 0%,rgba(32,109,241,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2093f1', endColorstr='#206df1',GradientType=1 );
+}
+
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.bar-button-default-md{color: #ffffff;}
+
+.header-md::after{
+	display:none;
+}
+
+
+.head22 ul {
+    padding: 0;
+}
+
+li .label-md {
+width: 54%;
+    float: left;
+    padding-left: 11PX;color: #fff;
+}
+
+.head22 ul li {
+    margin-bottom: 24px;
+    line-height: 16px;
+}
+
+.head22 ul li img.strt {
+    width: 39px !important;
+    float:left;    margin-left: 20px;
+}
+li .toggle-md {
+    display: inline-grid;
+}
+
+
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
+
+.cm {
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000000ba;
+}
+
+.comt {
+    width: 90%;
+    margin: auto auto 16px auto;
+    background-color: #cccccc70;
+    resize: none;
+    min-height: 100px;
+    border: 1px solid #ccccccbd;
+    padding: 5px 10px;
+}
+
+.sub {
+    width: 90%;
+    margin: 0 auto !important;
+    display: inherit;
+    border-radius: 3em;
+    padding: 22px;
+    background: rgb(32,147,241);
+    background: -moz-linear-gradient(left, rgba(32,147,241,1) 0%, rgba(32,109,241,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(32,147,241,1) 0%,rgba(32,109,241,1) 100%);
+    background: linear-gradient(to right, rgba(32,147,241,1) 0%,rgba(32,109,241,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2093f1', endColorstr='#206df1',GradientType=1 );
+    border: 1px solid #2085e6;
+}
+
+
+
+.frm {
+    padding: 0 0 30px;
+}
+}

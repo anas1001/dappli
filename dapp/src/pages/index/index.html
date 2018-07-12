@@ -1,0 +1,33 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+	<div class="logo"></div>
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="../assets/logotx.png" class="strt">
+      <div class="cssload-container">
+	<div class="cssload-whirlpool"></div>
+
+
+</div>
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-content class="home">
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+         <img [src]="slide.image" class="slide-image strt"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      
+      <img src="../assets/log2.png" class="slide-image strt"/>
+      <h2 class="slide-title">Ready For Buy Doodh?</h2>
+      <button ion-button  ion-button round  (click)="goToNext();">
+        Continue 
+        <ion-icon name="arrow-forward" class="ar"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,51 @@
+
+<ion-header>
+<ion-toolbar>
+<!--   <button ion-button menuToggle left>
+    <ion-icon name="menu"></ion-icon>
+  </button> -->
+  <ion-title>
+    Welcome
+  </ion-title>
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content class="home">
+<div class="head22">
+
+  
+  
+  
+  
+
+
+
+<ion-grid>
+  <ion-row padding>
+    <ion-col>
+      <button ion-button full  (click)="order()" class="delivery">Doodh Delivery</button>
+    </ion-col>
+    <ion-col>
+     <button ion-button full  (click)="about()" class="inquiry">About</button>
+    </ion-col>
+  </ion-row>
+    <ion-row padding>
+    <ion-col>
+      <button ion-button full  (click)="feedback()" class="feedback">Feedback</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button full (click)="term()"  class="statement" >Privacy Policy</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+
+<ion-label class="upd">Latest Update</ion-label>
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides2">
+
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

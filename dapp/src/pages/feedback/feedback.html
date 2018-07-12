@@ -1,0 +1,92 @@
+<!--
+  Generated template for the FeedbackPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Feedback</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="home">
+
+
+<div class="head22">
+
+
+
+<ul>
+	<li>
+    <img src="../assets/LogoMakr_5HQq4i.png" class="strt"> <ion-label>Broken Bottle</ion-label>
+    <ion-toggle [(ngModel)]="Broken"></ion-toggle>
+    </li>
+    <li>
+     <img src="../assets/LogoMakr_0h2ToZ.png" class="strt"><ion-label> High Milk Temprature</ion-label>
+     <ion-toggle [(ngModel)]="Inquiry"></ion-toggle>
+</li>
+<li>
+     <img src="../assets/LogoMakr_6MvxwO.png" class="strt"> <ion-label> No Delivery</ion-label>
+      <ion-toggle [(ngModel)]="noDelivery"></ion-toggle>
+</li>
+<li>
+     <img src="../assets/LogoMakr_5tY6Qz.png" class="strt"> <ion-label> Milk Quaility Not Good</ion-label>
+      <ion-toggle [(ngModel)]="Delivery"></ion-toggle>
+</li>
+<li>
+      <img src="../assets/LogoMakr_7Qn2ML.png" class="strt"><ion-label> Incorrect Quaintity</ion-label>
+      <ion-toggle [(ngModel)]="Incorrect"></ion-toggle>
+</li>
+<li>
+     <img src="../assets/LogoMakr_0xwNct.png" class="strt"> <ion-label> Delay In Delivery</ion-label>
+      <ion-toggle [(ngModel)]="Delay"></ion-toggle>
+</li>
+</ul>
+</div>
+
+<ion-label class="cm">Comment</ion-label>
+
+<!-- <ion-list>
+  <ion-item>
+    <ion-label>Rate Us</ion-label>
+    <ion-select [(ngModel)]="ratewise"   (ionChange)="ratefilter(ratewise);">
+      <ion-option value="1">1</ion-option>
+      <ion-option value="2">2</ion-option>
+      <ion-option value="3">3</ion-option>
+      <ion-option value="4">4</ion-option>
+      <ion-option value="5">5</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list> -->
+
+
+
+<!-- 
+
+<fieldset class="rating" radio-group >
+
+    <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="rate5"/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+
+    <input type="radio" id="star4" name="rating" value="4" [(ngModel)]="rate4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+
+    <input type="radio" id="star3" name="rating" value="3" [(ngModel)]="rate3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+
+    <input type="radio" id="star2" name="rating" value="2" [(ngModel)]="rate2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+
+
+    <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="rate1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+
+</fieldset> -->
+
+<form class="frm" [formGroup]="myform">
+<ion-textarea [(ngModel)]="comment" class="comt" formControlName="cmt" required></ion-textarea>
+<button class="sub" [disabled]="!myform.valid" (click)="feedback()" ion-button>Submit</button>
+</form>
+
+</ion-content>
